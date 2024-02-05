@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import ProductCard from '../HomeComp/ProductCard';
 
 export default function ProductCategory({ product }) {
@@ -7,10 +7,17 @@ export default function ProductCategory({ product }) {
     const [sortOrder, setSortOrder] = useState(null);
     const [selected, setSelect] = useState(0);
 
+    const [search, setSearch] = useState("")
+    console.log(search)
     // console.log(AllData);
+
+    const myfilterProduct = product.filter((value) => {
+        return value.category.toLowerCase().includes(search);
+    })
+    console.log(myfilterProduct);
     const uniqueData = (pro, propety) => {
         const newValue = pro.map((value) => {
-            return value[propety] 
+            return value[propety]
         })
 
         const newUniqueCat = ["All Product", ...new Set(newValue)];
@@ -18,9 +25,9 @@ export default function ProductCategory({ product }) {
     }
 
     const CategoryDate = uniqueData(product, "category");
-    const rating = uniqueData(product, "rating", );
-    
-   
+    const rating = uniqueData(product, "rating",);
+
+
     const UpdateFilterValue = (value, indx) => {
         setAllData(value);
         setSelect(indx);
@@ -34,6 +41,24 @@ export default function ProductCategory({ product }) {
 
     const prices = ["price:High to Low", "price:Low to High"]
 
+
+    const updateProduct = product?.filter((value, index, arr) => {
+        const mydata = AllData === "All Product" || value.category === AllData;
+        const searchData = search.toLowerCase() === '' ? value :
+            (value.category.toLowerCase().includes(search.toLowerCase()) ||
+                value.title.toLowerCase().includes(search.toLowerCase()) ||
+                value.description.toLowerCase().includes(search.toLowerCase()));
+
+        return mydata && searchData;
+    })?.sort((a, b) => {
+        if (sortOrder === 'price:Low to High') {
+            return a.price - b.price;
+        } else if (sortOrder === 'price:High to Low') {
+            return b.price - a.price;
+        } else {
+            return 0;
+        }
+    }) 
 
     return (
         <div className='flex w-full min-h-screen '>
@@ -61,20 +86,20 @@ export default function ProductCategory({ product }) {
 
             </div>
             <div className="basis-[80%] bg-gray-50 px-3">
+                <div className='w-full  mt-3'>
+                    <label htmlFor="input">Search : </label>
+                    <input
+                        type="text"
+                        name="input"
+                        id="input"
+                        className=" w-1/3 h-8 px-4 bg-gray-200 outline-none border  hover:border border-violet-800"
+                        placeholder='Search Product '
+                        value={search}
+                        onChange={(event) => setSearch(event.target.value)} />
+                </div>
                 <div className="w-full grid grid-cols-1 py-10 gap-10 lg:grid-cols-2 xl:grid-cols-3 place-items-center">
                     {
-                        product?.filter((value, index, arr) => {
-                            const mydata = AllData === "All Product" || value.category === AllData;
-                            return mydata;
-                        })?.sort((a, b) => {
-                            if (sortOrder === 'price:Low to High') {
-                                return a.price - b.price;
-                            } else if (sortOrder === 'price:High to Low') {
-                                return b.price - a.price;
-                            } else {
-                                return 0;
-                            }
-                        })?.map((value, index) => {
+                        updateProduct.map((value, index) => {
                             return (
                                 <ProductCard pro={value} key={index} />
                             )
