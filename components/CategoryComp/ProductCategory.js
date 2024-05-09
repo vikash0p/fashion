@@ -97,7 +97,7 @@ export default function ProductCategory({ product }) {
                         value={search}
                         onChange={(event) => setSearch(event.target.value)} />
                 </div>
-                <div className="w-full grid grid-cols-1 py-10 gap-10 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
+                <div className="w-full grid grid-cols-1 py-10 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
                     {
                         updateProduct.map((value, index) => {
                             return (
