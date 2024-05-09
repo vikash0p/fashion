@@ -4,6 +4,7 @@ import ReduxProvider from "@/redux-toolkit/ReduxProvider";
 import Navbar from "@/components/ReausableComp/Navbar";
 import Footer from "@/components/ReausableComp/Footer";
 import GoToTop from "@/components/ReausableComp/GoToTop";
+import NewSeller from "@/components/ReausableComp/NewSeller";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
+          <NewSeller />
           <GoToTop />
         </ReduxProvider>
       </body>
