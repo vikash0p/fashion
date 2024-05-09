@@ -42,7 +42,7 @@ const NewProducts = () => {
                                           Simple shirt
                                       </h3>
 
-                                      <p className="mt-1 text-sm text-violet-700">$150</p>
+                                      <p className="mt-1 text-sm text-violet-700">$50</p>
                                   </div>
                               </a>
                           </li>
@@ -62,7 +62,7 @@ const NewProducts = () => {
                                           Simple dress
                                       </h3>
 
-                                      <p className="mt-1 text-sm text-violet-700">$150</p>
+                                      <p className="mt-1 text-sm text-violet-700">$40</p>
                                   </div>
                               </a>
                           </li>
