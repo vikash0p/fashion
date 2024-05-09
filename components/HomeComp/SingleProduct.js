@@ -2,8 +2,14 @@
 import Image from 'next/image'
 import React from 'react'
 import Rating from './Rating'
+import { BsCartPlusFill } from "react-icons/bs";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux-toolkit/slice/CartSlice';
+import Link from 'next/link';
 
 const SingleProduct = ({ pro }) => {
+    const dispatch = useDispatch();
+
     const { id, title, price, description, category, image, rating } = pro
     return (
         <div className="max-w-7xl m-auto min-h-screen grid grid-cols-1 lg:grid-cols-2 py-10">
@@ -28,13 +34,12 @@ const SingleProduct = ({ pro }) => {
                     <h5 className='text-xl'>Price: <span className='font-bold'>${price} </span> </h5>
                     <h5 className='text-xl'>Category: <span className='font-bold'>${category} </span> </h5>
                     <h5 className='flex flex-row gap-3'>Rating: <div className='flex flex-row'> <Rating rating={rating} /> </div> </h5>
-                    <div className="mt-4 md:mt-8">
-                        <a
-                            href="#"
-                            className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                        >
-                            Get Started Today
-                        </a>
+                    <div className="mt-4 md:mt-8 space-x-5">
+                        <button type='button' className="bg-violet-700 px-6 py-2 text-white hover:bg-violet-900" onClick={() => {
+                            return dispatch(addToCart({ id, title, image, price, qty: 1 }))
+                        }}>Add to cart </button>
+
+                        <Link href={"/category"} className='bg-violet-700 px-6 py-3 text-white hover:bg-violet-900'>Back to Product</Link>
                     </div>
                 </div>
             </div>
