@@ -2,6 +2,20 @@
   @tailwind components;
   @tailwind utilities;
 
+root {
+    --swiper-theme-color: white !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #4c1d95 !important;
+}
+
+
+.swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+
+  background-color: #4c1d95;
+}
+
+
   @layer base {
     :root {
       --background: 0 0% 100%;
