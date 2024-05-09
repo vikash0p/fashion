@@ -27,3 +27,10 @@ export const fashion=[
     },
 
 ]
+
+export const links = [
+    { text: "Home", href: "/" },
+    { text: "Products", href: "/category" },
+    { text: "About", href: "/about" },
+    { text: "Contact Us", href: "/contact" }
+];
