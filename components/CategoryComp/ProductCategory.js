@@ -58,11 +58,11 @@ export default function ProductCategory({ product }) {
         } else {
             return 0;
         }
-    }) 
+    })
 
     return (
         <div className='flex w-full min-h-screen '>
-            <div className="basis-[20%]  py-2">
+            <div className="basis-[15%]  py-2">
                 <div className='flex flex-col w-full gap-2 ' >
                     <h1 className='text-2xl font-semibold '>Category</h1>
                     {
@@ -85,7 +85,7 @@ export default function ProductCategory({ product }) {
                 </div>
 
             </div>
-            <div className="basis-[80%] bg-gray-50 px-3">
+            <div className="basis-[85%] bg-gray-50 px-3">
                 <div className='w-full  mt-3'>
                     <label htmlFor="input">Search : </label>
                     <input
@@ -97,7 +97,7 @@ export default function ProductCategory({ product }) {
                         value={search}
                         onChange={(event) => setSearch(event.target.value)} />
                 </div>
-                <div className="w-full grid grid-cols-1 py-10 gap-10 lg:grid-cols-2 xl:grid-cols-3 place-items-center">
+                <div className="w-full grid grid-cols-1 py-10 gap-10 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
                     {
                         updateProduct.map((value, index) => {
                             return (

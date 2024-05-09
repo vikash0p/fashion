@@ -14,7 +14,7 @@ export const fetchData = async () => {
 export default async function Home() {
 
   const product = await fetchData();
-  // console.log("🚀 ~ file: page.js:17 ~ product:", product.reverse());
+  console.log("🚀 ~ file: page.js:17 ~ product:", product.reverse());
 
 
 const trending=product.slice(6)

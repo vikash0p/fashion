@@ -18,14 +18,14 @@ export default function ProductCard({pro}) {
       className='object-contain w-full h-48'
       priority
       />
-      <h1 className="min-h-24">{title} </h1>
+      <h1 className="min-h-24 font-semibold  " >{title} </h1>
       <div className='flex justify-between px-3  '>
               <h2 className='bg-violet-700 text-white  px-5 py-2'>$ : {price.toFixed()} </h2>
-        <h2 className='bg-violet-700 text-white  px-5 py-2' >Rating : {rating.rate} </h2>
+        <button type='button' className="bg-violet-700 px-6 py-2 text-white " onClick={() => {
+          return dispatch(addToCart({ id, title, image, price, qty: 1 }))
+        }}><BsCartPlusFill size={25} className='mx-auto w-full' /> </button>
       </div>
-      <button type='button' className="bg-violet-700 px-6 py-2 text-white w-1/2 mx-auto" onClick={()=>{
-        return dispatch(addToCart({id,title,image, price, qty:1}))
-      }}><BsCartPlusFill  size={25} className='mx-auto w-full' /> </button>
+
     </div>
   )
 }
