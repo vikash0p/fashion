@@ -11,7 +11,9 @@ export default function Navbar() {
             <div className="text-2xl font-bold  font-mono">Fashion</div>
             <div className='space-x-4'>
                 <Link href={"/"} className="">Home</Link>
-                <Link href={"/category"} className="">Category</Link>
+                <Link href={"/category"} className="">Products</Link>
+                <Link href={"/about"} className="">About </Link>
+                <Link href={"/contact"} className="">Contact Us </Link>
             </div>
             <Link href={"/cart"} className="flex"><IoCartSharp size={25} /> ({cart.length}) </Link>
         </div>
