@@ -3,6 +3,7 @@ import "./globals.css";
 import ReduxProvider from "@/redux-toolkit/ReduxProvider";
 import Navbar from "@/components/ReausableComp/Navbar";
 import Footer from "@/components/ReausableComp/Footer";
+import GoToTop from "@/components/ReausableComp/GoToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-violet-100">
       <body className={inter.className}>
         <ReduxProvider>
+
           <Navbar />
           {children}
           <Footer />
+          <GoToTop />
         </ReduxProvider>
       </body>
     </html>
