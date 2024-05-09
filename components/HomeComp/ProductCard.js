@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { BsCartPlusFill } from "react-icons/bs";
+import Link from 'next/link'
 
 export default function ProductCard({pro}) {
   const dispatch=useDispatch();
@@ -18,9 +19,10 @@ export default function ProductCard({pro}) {
       className='object-contain w-full h-48'
       priority
       />
-      <h1 className="min-h-24 font-semibold  " >{title} </h1>
+      <h1 className=" font-semibold truncate px-1" >{title} </h1>
+      <h5 className='text-start ps-1'>$ : {price.toFixed()} </h5>
       <div className='flex justify-between px-3  '>
-              <h2 className='bg-violet-700 text-white  px-5 py-2'>$ : {price.toFixed()} </h2>
+              <Link href={`/category/${id}`} className='bg-violet-700 text-white  px-5 py-2'> view</Link>
         <button type='button' className="bg-violet-700 px-6 py-2 text-white " onClick={() => {
           return dispatch(addToCart({ id, title, image, price, qty: 1 }))
         }}><BsCartPlusFill size={25} className='mx-auto w-full' /> </button>
