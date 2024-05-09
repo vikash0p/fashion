@@ -8,3 +8,15 @@
     text-wrap: balance;
   }
 }
+
+root {
+    --swiper-theme-color: black !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: black !important;
+}
+
+.swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+
+  background-color: black;
+}

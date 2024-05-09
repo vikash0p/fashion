@@ -7,8 +7,8 @@ import { useSelector } from 'react-redux';
 export default function Navbar() {
     const cart = useSelector((state) => state.allCart.cart);
     return (
-        <div className='flex justify-between w-full h-12 text-white bg-violet-800 items-center px-5'>
-            <div className="">Logobar</div>
+        <div className='flex justify-between w-full h-16 text-white bg-violet-800 items-center px-5 sticky top-0 left-0 right-0 z-50'>
+            <div className="text-2xl font-bold  font-mono">Fashion</div>
             <div className='space-x-4'>
                 <Link href={"/"} className="">Home</Link>
                 <Link href={"/category"} className="">Category</Link>

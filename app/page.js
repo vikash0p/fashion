@@ -1,25 +1,38 @@
+import Heading from '@/components/HomeComp/Heading';
+import HomeCarousel from '@/components/HomeComp/HomeCarosusel';
 import ProductCard from '@/components/HomeComp/ProductCard';
+import SwiperHome from '@/components/HomeComp/SwiperHome';
 import React from 'react'
 
-export const fetchData = async () =>{
+export const fetchData = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
+  if (!res.ok) throw new Error("Failed to fetch data");
   return await res.json();
-  
+
 }
 
 export default async function Home() {
 
- const product= await fetchData();
+  const product = await fetchData();
+  // console.log("🚀 ~ file: page.js:17 ~ product:", product.reverse());
+
+
+const trending=product.slice(6)
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-7 bg-gray-200 py-6 px-2'>
-      {
-        product.map((pro,indx,arr)=>{
-          return (
-            <ProductCard key={pro.id} pro={pro} />
-          )
-        })
-      }
+    <div>
+      <HomeCarousel />
+      <div className='max-w-7xl m-auto py-8'>
+        <Heading heading={"Featured Products"} />
+        <SwiperHome pro={product} />
+      </div>
+      <div className='max-w-7xl m-auto py-8'>
+        <Heading heading={"Trending Products"} />
+        <SwiperHome pro={trending} />
+      </div>
+
+
     </div>
+
   )
 }
