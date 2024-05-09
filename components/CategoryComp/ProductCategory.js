@@ -61,8 +61,8 @@ export default function ProductCategory({ product }) {
     })
 
     return (
-        <div className='flex w-full min-h-screen '>
-            <div className="basis-[15%]  py-2">
+        <div className='flex flex-col md:flex-row w-full min-h-screen '>
+            <div className=" basis-[100%] md:basis-[15%]  py-2">
                 <div className='flex flex-col w-full gap-2 ' >
                     <h1 className='text-2xl font-semibold '>Category</h1>
                     {
@@ -85,14 +85,14 @@ export default function ProductCategory({ product }) {
                 </div>
 
             </div>
-            <div className="basis-[85%] bg-gray-50 px-3">
+            <div className="basis-[100%] md:basis-[85%] bg-gray-50 px-3">
                 <div className='w-full  mt-3'>
                     <label htmlFor="input">Search : </label>
                     <input
                         type="text"
                         name="input"
                         id="input"
-                        className=" w-1/3 h-8 px-4 bg-gray-200 outline-none border  hover:border border-violet-800"
+                        className=" w-full md:w-1/3 h-8 px-4 bg-gray-200 outline-none border  hover:border border-violet-800"
                         placeholder='Search Product '
                         value={search}
                         onChange={(event) => setSearch(event.target.value)} />
