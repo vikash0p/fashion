@@ -9,7 +9,7 @@ export default function ProductCard({pro}) {
   const dispatch=useDispatch();
     const {id,title,price,description,category,image,rating}=pro
   return (
-    <div className='w-full py-7  bg-white flex flex-col justify-center gap-3 text-center border border-violet-800 shadow shadow-violet-800'>
+    <div className='w-full py-7  bg-white flex flex-col justify-center gap-3 text-center border border-violet-800 '>
       <Image
       src={image}
       alt={title}
