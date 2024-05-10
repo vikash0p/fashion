@@ -4,6 +4,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 
 const NewSeller = () => {
+    const [isReady, setIsReady] = useState(false); // State to control rendering
     const [isOpen, setIsOpen] = useState(true);
 
     const closeComponent = () => {
@@ -15,11 +16,25 @@ const NewSeller = () => {
     };
 
     useEffect(() => {
+        // Wait for 5 seconds before setting isReady to true
+        const timer = setTimeout(() => {
+            setIsReady(true);
+        }, 5000);
+
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+    }, []); // Run effect only once on component mount
+
+    useEffect(() => {
         if (!isOpen) {
             const timer = setTimeout(openComponent, 60 * 60 * 1000); //1hr
             return () => clearTimeout(timer);
         }
     }, [isOpen]);
+
+    // Render null until the component is ready
+    if (!isReady) {
+        return null;
+    }
 
     return (
         <motion.div
@@ -29,15 +44,14 @@ const NewSeller = () => {
             exit={{ y: "-100%" }}
             className={`flex flex-col items-center justify-center w-full min-h-screen bg-black/80 absolute top-0 left-0 right-0 bottom-0 z-50  overflow-x-hidden`}
             onClick={closeComponent}
-
         >
             <motion.form
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -50 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: "linear" }}
                 className="flex flex-col bg-white rounded shadow-lg p-12 mt-12"
-                // onClick={(e) => e.stopPropagation()}
-
+                action=""
+                onClick={(e) => e.stopPropagation()}
             >
                 <button type="button" className="ms-auto text-xl bg-gray-900 text-white p-2 rounded-full" onClick={closeComponent}><IoCloseSharp /></button>
                 <label className="font-semibold text-xs" htmlFor="usernameField">Username or Email</label>
