@@ -36,7 +36,7 @@ const NewSeller = () => {
                 animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -50 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: "linear" }}
                 className="flex flex-col bg-white rounded shadow-lg p-12 mt-12"
-                onClick={(e) => e.stopPropagation()}
+                // onClick={(e) => e.stopPropagation()}
 
             >
                 <button type="button" className="ms-auto text-xl bg-gray-900 text-white p-2 rounded-full" onClick={closeComponent}><IoCloseSharp /></button>
