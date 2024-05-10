@@ -1,10 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
-import { motion } from 'framer-motion'; // Import motion from Framer Motion
+import { motion } from 'framer-motion'; 
 
 const NewSeller = () => {
-    const [isReady, setIsReady] = useState(false); // State to control rendering
+    const [isReady, setIsReady] = useState(false);
     const [isOpen, setIsOpen] = useState(true);
 
     const closeComponent = () => {

@@ -9,8 +9,8 @@ const CartSlice = createSlice({
     reducers: {
         addToCart(state, action) {
 
-            console.log(action.payload);
-            
+            // console.log(action.payload);
+
             const cartisExist = state.cart.find((value) => value.id === action.payload.id);
             if (cartisExist) {
 
@@ -23,7 +23,7 @@ const CartSlice = createSlice({
             }
         },
         removeToCart(state, action) {
-            console.log(action.payload);
+            // console.log(action.payload);
 
             state.cart = state.cart.filter((value, index, arr) => value.id !== action.payload.id);
         },

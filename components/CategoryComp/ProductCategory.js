@@ -8,13 +8,13 @@ export default function ProductCategory({ product }) {
     const [selected, setSelect] = useState(0);
 
     const [search, setSearch] = useState("")
-    console.log(search)
+    // console.log(search)
     // console.log(AllData);
 
     const myfilterProduct = product.filter((value) => {
         return value.category.toLowerCase().includes(search);
     })
-    console.log(myfilterProduct);
+    // console.log(myfilterProduct);
     const uniqueData = (pro, propety) => {
         const newValue = pro.map((value) => {
             return value[propety]
