@@ -9,7 +9,7 @@ export const getSingleProduct = async (id) => {
             throw new Error("Failed to fetch data");
         }
         data = await res.json();
-        console.log("🚀 ~ file: page.js:11 ~ data:", data);
+        // console.log("🚀 ~ file: page.js:11 ~ data:", data);
         return data
 
     } catch (error) {
@@ -23,7 +23,7 @@ export const getSingleProduct = async (id) => {
 
 export default async function CategoryId({ params }) {
     const data = await getSingleProduct(params.id)
-    console.log("🚀 ~ file: page.js:25 ~ data:", data);
+    // console.log("🚀 ~ file: page.js:25 ~ data:", data);
     return <div>
         <SingleProduct pro={data} />
 
