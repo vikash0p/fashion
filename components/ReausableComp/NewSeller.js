@@ -36,7 +36,6 @@ const NewSeller = () => {
                 animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -50 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: "linear" }}
                 className="flex flex-col bg-white rounded shadow-lg p-12 mt-12"
-                action=""
                 onClick={(e) => e.stopPropagation()}
 
             >
