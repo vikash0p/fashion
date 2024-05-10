@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { IoCloseSharp } from 'react-icons/io5';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 
 const NewSeller = () => {
     const [isReady, setIsReady] = useState(false);
@@ -51,7 +51,8 @@ const NewSeller = () => {
                 transition={{ delay: 0.2, duration: 0.5, ease: "linear" }}
                 className="flex flex-col bg-white rounded shadow-lg p-12 mt-12"
                 action=""
-                onClick={(e) => e.stopPropagation()}
+                // onClick={(e) => e.stopPropagation()}
+                
             >
                 <button type="button" className="ms-auto text-xl bg-gray-900 text-white p-2 rounded-full" onClick={closeComponent}><IoCloseSharp /></button>
                 <label className="font-semibold text-xs" htmlFor="usernameField">Username or Email</label>
