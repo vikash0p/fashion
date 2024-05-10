@@ -1,6 +1,5 @@
 import SingleProduct from "@/components/HomeComp/SingleProduct";
-
-export const getSingleProduct = async (id) => {
+ const getSingleProduct = async (id) => {
     let data;
     try {
         const res = await fetch(`https://fakestoreapi.com/products/${id}`);

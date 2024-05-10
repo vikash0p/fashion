@@ -7,10 +7,17 @@ import SwiperHome from '@/components/HomeComp/SwiperHome';
 import React from 'react'
 
 export const fetchData = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
-  if (!res.ok) throw new Error("Failed to fetch data");
-  return await res.json();
+  let data
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
+    if (!res.ok) throw new Error("Failed to fetch data");
+    data = await res.json();
+    return data
 
+  } catch (error) {
+    console.log("🚀 ~ file: page.js:16 ~ error:", error);
+
+  }
 }
 
 export default async function Home() {
@@ -19,11 +26,11 @@ export default async function Home() {
   // console.log("🚀 ~ file: page.js:17 ~ product:", product.reverse());
 
 
-const trending=product.slice(6)
+  const trending = product.slice(6)
 
   return (
     <div>
-      <HomeCarousel />
+      {/* <HomeCarousel />
       <div className='max-w-7xl m-auto py-8'>
         <Heading heading={"Featured Products"} />
         <SwiperHome pro={product} />
@@ -33,7 +40,7 @@ const trending=product.slice(6)
         <Heading heading={"Trending Products"} />
         <SwiperHome pro={trending} />
       </div>
-      <Collection />
+      <Collection /> */}
 
 
     </div>
