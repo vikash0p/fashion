@@ -30,17 +30,17 @@ export default async function Home() {
 
   return (
     <div>
-      {/* <HomeCarousel />
-      <div className='max-w-7xl m-auto py-8'>
+       <HomeCarousel />
+      <div className='py-8 m-auto max-w-7xl'>
         <Heading heading={"Featured Products"} />
         <SwiperHome pro={product} />
       </div>
       <NewProducts />
-      <div className='max-w-7xl m-auto py-8'>
+      <div className='py-8 m-auto max-w-7xl'>
         <Heading heading={"Trending Products"} />
         <SwiperHome pro={trending} />
       </div>
-      <Collection /> */}
+      <Collection />
 
 
     </div>
