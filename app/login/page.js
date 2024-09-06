@@ -23,7 +23,7 @@ export const metadata = {
 const Login = () => {
   return (
     <div>
-
+Login page
     </div>
   )
 }
