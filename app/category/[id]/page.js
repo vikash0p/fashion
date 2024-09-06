@@ -1,5 +1,6 @@
 import SingleProduct from "@/components/HomeComp/SingleProduct";
 
+// Function to fetch a single product by ID
 const getSingleProduct = async (id) => {
     let data;
     try {
@@ -10,12 +11,13 @@ const getSingleProduct = async (id) => {
         data = await res.json();
         return data;
     } catch (error) {
-        console.log("🚀 ~ file: page.js:13 ~ error:", error);
+        console.error("🚀 ~ Error fetching product:", error);
         return null;
     }
 };
 
-export const generateMetadata = async (params) => {
+// Function to generate metadata for the page
+export const generateMetadata = async ({ params }) => {
     const product = await getSingleProduct(params.id);
 
     if (!product) {
@@ -31,26 +33,27 @@ export const generateMetadata = async (params) => {
         openGraph: {
             title: `${product.title} | Fashion Store`,
             description: `${product.description} Available now at Fashion Store.`,
-            url: `${process.env.URL}/product/${params.id}`, // Update to your actual URL
-            images: product.image, // Make sure this is the correct image URL
+            url: `${process.env.NEXT_PUBLIC_URL}/category/${params.id}`, // Update to your actual URL
+            images: [product.image], // Ensure this is an array
             siteName: "Fashion Store",
         },
         twitter: {
             card: "summary_large_image",
             title: `${product.title} | Fashion Store`,
             description: `${product.description} Available now at Fashion Store.`,
-            images: product.image, // Make sure this is the correct image URL
+            images: [product.image], // Ensure this is an array
         },
     };
 };
 
+// Default export for the page component
 export default async function CategoryId({ params }) {
     const data = await getSingleProduct(params.id);
 
-    // Generate metadata dynamically
-    // const metadata = await generateMetadata(params);
+    if (!data) {
+        return <div>Product not found.</div>; // Handle case where product is not found
+    }
 
-    // Return metadata along with the component
     return (
         <div>
             <SingleProduct pro={data} />
