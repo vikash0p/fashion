@@ -23,7 +23,7 @@ export const metadata = {
 const Contact = () => {
   return (
     <div>
-
+contact page
     </div>
   )
 }
