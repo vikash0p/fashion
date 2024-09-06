@@ -48,7 +48,7 @@ export default async function CategoryId({ params }) {
     const data = await getSingleProduct(params.id);
 
     // Generate metadata dynamically
-    const metadata = await generateMetadata(params);
+    // const metadata = await generateMetadata(params);
 
     // Return metadata along with the component
     return (
