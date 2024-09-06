@@ -1,3 +1,4 @@
+import RegisterForm from '@/components/FormComponent/RegisterForm';
 import React from 'react'
 export const metadata = {
     title: "Register | Fashion Store - Create Your Account",
@@ -23,7 +24,7 @@ export const metadata = {
 const Register = () => {
   return (
     <div>
-
+<RegisterForm />
     </div>
   )
 }

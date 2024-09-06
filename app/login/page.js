@@ -1,3 +1,4 @@
+import LoginForm from '@/components/FormComponent/LoginForm';
 import React from 'react'
 export const metadata = {
     title: "Login | Fashion Store - Access Your Account",
@@ -21,11 +22,11 @@ export const metadata = {
 };
 
 const Login = () => {
-  return (
-    <div>
-Login page
-    </div>
-  )
+    return (
+        <div>
+            <LoginForm />
+        </div>
+    )
 }
 
 export default Login
