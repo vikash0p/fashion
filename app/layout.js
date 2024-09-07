@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
-          {/* <NewSeller /> */}
+          <NewSeller />
           <GoToTop />
         </ReduxProvider>
       </body>
