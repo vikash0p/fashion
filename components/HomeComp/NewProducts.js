@@ -35,7 +35,10 @@ const NewProducts = () => {
                                       src="https://images.unsplash.com/photo-1552664199-fd31f7431a55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3RoaW5nfGVufDB8fDB8fHww"
                                       alt=""
                                       className="aspect-square w-full rounded object-cover"
-                                      sizes="(min-width: 1360px) 395px, (min-width: 1040px) calc(26.67vw + 38px), calc(48.89vw - 21px)"                                />
+                                      sizes="(min-width: 1360px) 395px, (min-width: 1040px) calc(26.67vw + 38px), calc(48.89vw - 21px)"
+                                      loading='lazy'
+                                      placeholder='blur'
+                                                     />
 
                                   <div className="mt-3">
                                       <h3
@@ -55,7 +58,10 @@ const NewProducts = () => {
                                       src="https://images.unsplash.com/photo-1585487000143-9bcec9b8e483?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fGNsb3RoaW5nfGVufDB8fDB8fHww"
                                       alt=""
                                       className="aspect-square w-full rounded object-cover object-top"
-                                  sizes="(min-width: 1360px) 395px, (min-width: 1040px) calc(26.67vw + 38px), calc(48.89vw - 21px)"                                 />
+                                  sizes="(min-width: 1360px) 395px, (min-width: 1040px) calc(26.67vw + 38px), calc(48.89vw - 21px)"
+                                  loading='lazy'
+                                  placeholder='blur'
+                                                       />
 
                                   <div className="mt-3">
                                       <h3
