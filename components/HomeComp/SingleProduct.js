@@ -19,7 +19,7 @@ const SingleProduct = ({ pro }) => {
                     alt={title}
                     src={image}
                     className="h-56 w-full object-contain object-center sm:h-full"
-                />
+                    sizes="(min-width: 1560px) 308px, (min-width: 1200px) calc(5.88vw + 217px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"               />
             </div>
 
             <div className="p-8 md:p-12 lg:px-16 lg:py-24">

@@ -10,8 +10,8 @@ export default function NotFound() {
             alt='not found'
             width={400}
             height={400}
-            className='object-cover max-w-sm md:max-w-md lg:max-w-lg '
-            />
+            className='object-cover max-w-sm md:max-w-md lg:max-w-lg'
+                sizes="(min-width: 400px) 320px, calc(65vw + 73px)" />
             <h2>Not Found</h2>
             <p>Could not find requested resource</p>
             <Link href="/" className='px-8 py-2 bg-violet-800 rounded text-xl  text-white '>Return Home</Link>

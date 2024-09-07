@@ -37,7 +37,7 @@ export default function CartCard() {
                             width={500}
                             height={500}
                             className='object-contain w-96 h-96'
-                        />
+                            sizes="(min-width: 1640px) 308px, (min-width: 1200px) calc(4.76vw + 231px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"                        />
                         <Link href={"/"} className='w-1/4 text-center py-2 bg-primary text-lg text-white'>Go To HomePage</Link>
                     </div>
                 ) : (
@@ -63,7 +63,7 @@ export default function CartCard() {
                                                         width={50}
                                                         height={50}
                                                         className='w-12 h-12 object-cover rounded-full mr-4'
-                                                    />
+                                                        sizes="(min-width: 1640px) 308px, (min-width: 1200px) calc(4.76vw + 231px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"                                                    />
                                                     <span>{value.title}</span>
                                                 </td>
                                                 <td className="py-2">${(value.price * value.qty).toFixed(0)}</td>

@@ -42,7 +42,7 @@ export default function HomeCarousel() {
                             <SwiperSlide key={Value.id} className='w-full h-full'>
                                 <div className='w-full h-full relative  '>
                                     <div className='w-full h-full relative '>
-                                        <Image src={Value.img} alt={Value.des} fill className='w-full h-full object-fill md:object-cover md:object-top ' />
+                                        <Image src={Value.img} alt={Value.des} fill className='w-full h-full object-fill md:object-cover md:object-top ' sizes="(min-width: 440px) 100vw, calc(83.33vw + 50px)" />
                                     </div>
                                     <div className='absolute top-0 w-full h-full px-1 pb-5 md:px-0 md:pb-0 text-center  md:text-start  '>
                                         <div className='flex w-full h-full flex-col md:flex-row gap-4 justify-center items-center md:pe-8 '>

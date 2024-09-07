@@ -64,7 +64,7 @@ export function CartSideBar() {
                             width={200}
                             height={200}
                             className="object-contain w-48 h-48"
-                        />
+                            sizes="(min-width: 1640px) 308px, (min-width: 1200px) calc(4.76vw + 231px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"                        />
                         <Link href="/" className="w-full text-center py-2 bg-primary text-white">Go To HomePage</Link>
                     </div>
                 ) : (
@@ -88,7 +88,7 @@ export function CartSideBar() {
                                                 width={50}
                                                 height={50}
                                                 className="w-12 h-12 object-cover rounded-full mr-4"
-                                            />
+                                                sizes="(min-width: 1640px) 308px, (min-width: 1200px) calc(4.76vw + 231px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"                                            />
                                         </td>
                                         <td className="py-2">${(item.price * item.qty).toFixed(0)}</td>
                                         <td className="py-2 text-center">

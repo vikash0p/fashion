@@ -22,7 +22,7 @@ export default function ProductCard({ pro }) {
           width={500}
           height={500}
           className='object-contain w-full h-48'
-          priority
+          sizes="(min-width: 1640px) 308px, (min-width: 1200px) calc(4.76vw + 231px), (min-width: 1040px) 31.43vw, (min-width: 420px) 379px, calc(84vw + 43px)"
         />
       ) : (
         <div className="w-full h-48 bg-gray-200 flex justify-center items-center">

@@ -21,7 +21,7 @@ export default function AboutComponent() {
                         layout="fill"
                         objectFit="cover"
                         className="rounded-lg"
-                    />
+                        sizes="(min-width: 1500px) 676px, (min-width: 1040px) calc(40.91vw + 71px), calc(100vw - 32px)" />
                 </div>
 
                 {/* Text Section */}
@@ -115,7 +115,7 @@ export default function AboutComponent() {
                             width={150}
                             height={150}
                             className="w-80 h-60"
-                        />
+                            sizes="(min-width: 400px) 320px, calc(65vw + 73px)" />
                         <h4 className="text-xl font-bold mt-4">Jessica Smith</h4>
                         <p className="">Founder & CEO</p>
                     </div>
@@ -126,7 +126,7 @@ export default function AboutComponent() {
                             width={150}
                             height={150}
                             className="w-80 h-60"
-                        />
+                            sizes="(min-width: 400px) 320px, calc(65vw + 73px)" />
                         <h4 className="text-xl font-bold mt-4">John Doe</h4>
                         <p className="">Lead Designer</p>
                     </div>
@@ -137,7 +137,7 @@ export default function AboutComponent() {
                             width={150}
                             height={150}
                             className="w-80 h-60"
-                        />
+                            sizes="(min-width: 400px) 320px, calc(65vw + 73px)" />
                         <h4 className="text-xl font-bold mt-4">Emily Johnson</h4>
                         <p className="">Marketing Director</p>
                     </div>
