@@ -31,7 +31,7 @@ export default function HomeCarousel() {
                 navigation={true}
                 loop={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper h-80 md:h-[500px] w-full "
+                className="mySwiper h-60 md:h-[500px] w-full "
             >
                 {
                     fashion.map((Value) => {
@@ -39,16 +39,16 @@ export default function HomeCarousel() {
                         const myDes1 = Value.des.split(" ").slice(2,).join(" ");
 
                         return (
-                            <SwiperSlide key={Value.id} className='w-full h-full'>
+                            <SwiperSlide key={Value.id} className='w-full h-60 md:h-full'>
                                 <div className='w-full h-full relative  '>
-                                    <div className='w-full h-full relative '>
-                                        <Image src={Value.img} alt={Value.des} fill className='w-full h-full object-fill md:object-cover md:object-top ' sizes="(min-width: 440px) 100vw, calc(83.33vw + 50px)" />
+                                    <div className='w-ful h-60 md:h-full relative '>
+                                        <Image src={Value.img} alt={Value.des} fill className='w-full  h-full  md:object-cover md:object-top ' sizes="(min-width: 440px) 100vw, calc(83.33vw + 50px)" />
                                     </div>
-                                    <div className='absolute top-0 w-full h-full px-1 pb-5 md:px-0 md:pb-0 text-center  md:text-start  '>
-                                        <div className='flex w-full h-full flex-col md:flex-row gap-4 justify-center items-center md:pe-8 '>
+                                    <div className='absolute -top-8 left-10  md:left-0 md:top-0 w-full h-full px-1 pb-5 md:px-0 md:pb-0 text-center  md:text-start  '>
+                                        <div className='flex w-full h-full flex-col md:flex-row md:gap-4 justify-center items-center md:pe-8 '>
                                             <div className="flex-1"></div>
-                                            <div className="flex-1 space-y-3">
-                                                <h2 className=' text-3xl  md:text-5xl font-serif font-bold'>{myDes} </h2>
+                                            <div className="flex-1 space-y-1 md:space-y-3">
+                                                <h2 className=' text-xl md:text-3xl  lg:text-5xl font-serif font-bold'>{myDes} </h2>
                                                 <p className='text-wrap text-xl hidden md:block  '>{myDes1} </p>
                                                 <h1 className=''>Your summer sale Upto 50% off</h1>
                                                 <button onClick={() => { router.push("/category") }} type="button" className='px-8 py-2 bg-primary rounded-sm text-md hover:bg-secondary'>Shop Now</button>
