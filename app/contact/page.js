@@ -1,3 +1,4 @@
+import ContactComponent from '@/components/ReausableComp/ContactComponent';
 import React from 'react'
 export const metadata = {
   title: "Contact Us | Fashion Store - Get in Touch",
@@ -23,7 +24,7 @@ export const metadata = {
 const Contact = () => {
   return (
     <div>
-contact page
+<ContactComponent />
     </div>
   )
 }

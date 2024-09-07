@@ -1,3 +1,4 @@
+import AboutComponent from '@/components/ReausableComp/AboutComponent';
 import React from 'react'
 export const metadata = {
   title: "About Us | Fashion Store - Elegance & Trends Combined",
@@ -23,7 +24,7 @@ export const metadata = {
 const About = () => {
   return (
     <div>
-
+<AboutComponent />
     </div>
   )
 }
