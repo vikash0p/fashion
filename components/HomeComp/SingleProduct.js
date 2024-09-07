@@ -35,12 +35,12 @@ const SingleProduct = ({ pro }) => {
                     <h5 className='text-xl'>Category: <span className='font-bold'>${category} </span> </h5>
                     <h5 className='flex flex-row gap-3'>Rating: <div className='flex flex-row'> <Rating rating={rating} /> </div> </h5>
                     <div className="mt-4 md:mt-8 space-x-5">
-                        <button type='button' className="bg-violet-700 px-6 py-2 text-white hover:bg-violet-900" onClick={() => {
+                        <button type='button' className="bg-primary px-6 py-2 text-white hover:bg-secondary" onClick={() => {
                              dispatch(addToCart({ id, title, image, price, qty: 1 }));
                              alert("Product added to cart successfully!");
                         }}>Add to cart </button>
 
-                        <Link href={"/category"} className='bg-violet-700 px-6 py-3 text-white hover:bg-violet-900'>Back to Product</Link>
+                        <Link href={"/category"} className='bg-primary px-6 py-3 text-white hover:bg-secondary'>Back to Product</Link>
                     </div>
                 </div>
             </div>
