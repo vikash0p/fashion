@@ -43,6 +43,7 @@ export default function ProductCard({ pro }) {
           className="bg-primary px-6 py-2"
           onClick={() => {
             dispatch(addToCart({ id, title, image, price, qty: 1 }));
+            alert("Item added to cart successfully");
           }}
         >
           <BsCartPlusFill size={25} className='mx-auto w-full' />

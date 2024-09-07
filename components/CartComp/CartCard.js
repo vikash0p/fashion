@@ -79,7 +79,10 @@ export default function CartCard() {
                                                     </div>
                                                 </td>
                                                 <td className="py-2 text-center">
-                                                    <button onClick={() => dispatch(removeToCart(value))}>
+                                                    <button onClick={() => {
+                                                        dispatch(removeToCart(value))
+                                                        alert("Item Removed From Cart successfully");
+                                                    }}>
                                                         <MdDelete size={25} className='text-red-800 hover:text-violet-600' />
                                                     </button>
                                                 </td>
