@@ -70,8 +70,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-violet-100">
-      <body className={inter.className}>
+    <html lang="en" className="">
+      <body className={`${inter.className} bg-[#e9c7f2] `}>
         <ReduxProvider>
 
           <Navbar />
