@@ -1,6 +1,7 @@
 export default function sitemap() {
     const currentDate = new Date().toISOString();
 
+    
     const urls = [
         { url: 'https://storefashion.vercel.app/', changeFrequency: 'yearly', priority: 1 },
         { url: 'https://storefashion.vercel.app/category', changeFrequency: 'monthly', priority: 0.8 },
