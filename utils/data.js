@@ -32,5 +32,7 @@ export const links = [
     { text: "Home", href: "/" },
     { text: "Products", href: "/category" },
     { text: "About", href: "/about" },
-    { text: "Contact Us", href: "/contact" }
+    { text: "Contact ", href: "/contact" },
+    { text: "Register", href: "/register" },
+    { text: "Login", href: "/login" },
 ];
