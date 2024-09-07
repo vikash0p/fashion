@@ -3,14 +3,14 @@ import React from 'react'
 const Footer = () => {
   return (
 
-          <footer className="bg-white">
+          <footer className="bg-background">
               <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
                   <div className="lg:flex lg:items-center lg:justify-between">
-                      <div className="flex justify-center text-violet-800 sm:justify-start">
+                      <div className="flex justify-center  sm:justify-start">
                       <h2 className='text-3xl font-bold  font-mono'>Fashion</h2>
                       </div>
 
-                      <p className="mt-4 max-w-md text-center leading-relaxed text-gray-500 sm:text-left lg:mt-0">
+                      <p className="mt-4 max-w-md text-center leading-relaxed  sm:text-left lg:mt-0">
                       Elegance stitched in every seam; style speaks volumes, transcending trends, adorned with confidence and grace.
                       </p>
                   </div>
@@ -118,7 +118,7 @@ const Footer = () => {
                           <p className="text-lg font-medium text-gray-900">Stay in Touch</p>
 
                           <div className="mx-auto mt-8 max-w-md sm:ms-0">
-                              <p className=" leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right">
+                              <p className=" leading-relaxed  ltr:sm:text-left rtl:sm:text-right">
                               Elegance stitched in every seam; style speaks volumes, transcending trends, adorned with confidence and grace.
 
                               </p>
@@ -128,13 +128,13 @@ const Footer = () => {
                                       <label htmlFor="email" className="sr-only">Email</label>
 
                                       <input
-                                          className="w-full  rounded-full border-violet-800 border outline-violet-600 px-6 py-3 shadow-sm"
+                                          className="w-full  rounded-full border-primary px-6 py-3 shadow-sm"
                                           type="email"
                                           placeholder="Enter your email"
                                       />
 
                                       <button
-                                          className="block rounded-full bg-violet-500 px-8 py-3 font-medium text-white transition hover:bg-violet-800"
+                                          className="block rounded-full bg-primary px-8 py-3 font-medium text-white transition hover:bg-secondary"
                                           type="submit"
                                       >
                                           Subscribe
@@ -146,7 +146,7 @@ const Footer = () => {
                   </div>
 
                   <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between">
-                      <p className="text-center text-sm text-gray-500 sm:text-left">
+                      <p className="text-center text-sm  sm:text-left">
                           Copyright &copy; 2024. All rights reserved.
                       </p>
 
@@ -156,7 +156,7 @@ const Footer = () => {
                                   href="#"
                                   rel="noreferrer"
                                   target="_blank"
-                                  className="text-violet-800 transition hover:text-violet-800/75"
+                                  className="text-primary hover:text-secondary"
                               >
                                   <span className="sr-only">Facebook</span>
                                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -174,7 +174,7 @@ const Footer = () => {
                                   href="#"
                                   rel="noreferrer"
                                   target="_blank"
-                                  className="text-violet-800 transition hover:text-violet-800/75"
+                                  className="text-primary hover:text-secondary"
                               >
                                   <span className="sr-only">Instagram</span>
                                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -192,7 +192,7 @@ const Footer = () => {
                                   href="#"
                                   rel="noreferrer"
                                   target="_blank"
-                                  className="text-violet-800 transition hover:text-violet-800/75"
+                                  className="text-primary hover:text-secondary"
                               >
                                   <span className="sr-only">Twitter</span>
                                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -208,7 +208,7 @@ const Footer = () => {
                                   href="#"
                                   rel="noreferrer"
                                   target="_blank"
-                                  className="text-violet-800 transition hover:text-violet-800/75"
+                                  className="text-primary hover:text-secondary"
                               >
                                   <span className="sr-only">GitHub</span>
                                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -226,7 +226,7 @@ const Footer = () => {
                                   href="#"
                                   rel="noreferrer"
                                   target="_blank"
-                                  className="text-violet-800 transition hover:text-violet-800/75"
+                                  className="text-primary hover:text-secondary"
                               >
                                   <span className="sr-only">Dribbble</span>
                                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

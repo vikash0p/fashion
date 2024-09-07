@@ -56,11 +56,11 @@ const LoginForm = () => {
 
     return (
         <div className="flex items-center justify-center min-h-screen p-4 ">
-            <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-2xl">
+            <div className="w-full max-w-md p-8 bg-secondary rounded-lg shadow-2xl">
                 <h2 className="mb-6 text-2xl font-bold text-center">Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email <span className='text-red-500 text-lg'>*</span></label>
+                        <label htmlFor="email" className="block text-sm font-medium ">Email <span className='text-red-500 text-lg'>*</span></label>
                         <input
                             id="email"
                             name="email"
@@ -73,7 +73,7 @@ const LoginForm = () => {
                     </div>
 
                     <div className="mb-6">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password <span className='text-red-500 text-lg'>*</span></label>
+                        <label htmlFor="password" className="block text-sm font-medium ">Password <span className='text-red-500 text-lg'>*</span></label>
                         <input
                             id="password"
                             name="password"
@@ -87,7 +87,7 @@ const LoginForm = () => {
 
                     <button
                         type="submit"
-                        className="w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-sm shadow-sm bg-violet-600 hover:bg-violet-700"
+                        className="w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-sm shadow-sm bg-primary hover:bg-violet-700"
                     >
                         Login
                     </button>

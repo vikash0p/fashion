@@ -61,12 +61,12 @@ const RegisterForm = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen p-4 bg-gray-100">
-            <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+        <div className="flex items-center justify-center min-h-screen p-4 ">
+            <div className="w-full max-w-md p-8  bg-secondary rounded-lg shadow-lg">
                 <h2 className="mb-6 text-2xl font-bold text-center">Register</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name <span className='text-red-500 text-lg'>*</span></label>
+                        <label htmlFor="name" className="block text-sm font-medium ">Name <span className='text-red-500 text-lg'>*</span></label>
                         <input
                             id="name"
                             name="name"
@@ -79,7 +79,7 @@ const RegisterForm = () => {
                     </div>
 
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email <span className='text-red-500 text-lg'>*</span></label>
+                        <label htmlFor="email" className="block text-sm font-medium ">Email <span className='text-red-500 text-lg'>*</span></label>
                         <input
                             id="email"
                             name="email"
@@ -92,7 +92,7 @@ const RegisterForm = () => {
                     </div>
 
                     <div className="mb-6">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password <span className='text-red-500 text-lg'>*</span></label>
+                        <label htmlFor="password" className="block text-sm font-medium ">Password <span className='text-red-500 text-lg'>*</span></label>
                         <input
                             id="password"
                             name="password"
@@ -106,7 +106,7 @@ const RegisterForm = () => {
 
                     <button
                         type="submit"
-                        className={`w-full py-2 px-4 border border-transparent rounded-sm  shadow-sm text-base font-medium text-white bg-violet-600 hover:bg-violet-700 `}
+                        className={`w-full py-2 px-4 border border-transparent rounded-sm  shadow-sm text-base font-medium  bg-primary `}
                     >
                         Register
                     </button>

@@ -31,7 +31,7 @@ const GoToTop = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 type="button"
-                className=" fixed bottom-4 right-5 z-50  text-5xl text-violet-800 transition duration-200 ease-linear "
+                className=" fixed bottom-4 right-5 z-50  text-5xl text-primary transition duration-200 ease-linear "
                 onClick={goToButton}
             >
                 {isVisible && <BsFillArrowUpCircleFill />}

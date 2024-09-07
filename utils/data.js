@@ -35,4 +35,5 @@ export const links = [
     { text: "Contact ", href: "/contact" },
     { text: "Register", href: "/register" },
     { text: "Login", href: "/login" },
+    { text: "Cart", href: "/cart" },
 ];

@@ -14,7 +14,7 @@ import { useRouter } from 'next/navigation';
 
 
 export default function HomeCarousel() {
-    const router=useRouter();
+    const router = useRouter();
     return (
         <>
             <Swiper
@@ -26,15 +26,17 @@ export default function HomeCarousel() {
                 }}
                 pagination={{
                     clickable: true,
+                    dynamicBullets: true,
                 }}
                 navigation={true}
+                loop={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper h-80 md:h-[500px] w-full "
             >
                 {
                     fashion.map((Value) => {
-                        const myDes= Value.des.split(" ").slice(0,2).join(" ");
-                        const myDes1= Value.des.split(" ").slice(2, ).join(" ");
+                        const myDes = Value.des.split(" ").slice(0, 2).join(" ");
+                        const myDes1 = Value.des.split(" ").slice(2,).join(" ");
 
                         return (
                             <SwiperSlide key={Value.id} className='w-full h-full'>
@@ -46,10 +48,10 @@ export default function HomeCarousel() {
                                         <div className='flex w-full h-full flex-col md:flex-row gap-4 justify-center items-center md:pe-8 '>
                                             <div className="flex-1"></div>
                                             <div className="flex-1 space-y-3">
-                                                <h2 className='text-violet-800 text-3xl  md:text-5xl font-serif font-bold'>{myDes} </h2>
-                                                <p className='text-wrap text-xl '>{myDes1} </p>
-                                                <h1 className='text-red-800'>Your summer sale Upto 50% off</h1>
-                                                <button onClick={()=>{router.push("/category") }}  type="button" className='px-8 py-2 bg-violet-800 rounded-sm text-white text-md hover:bg-violet-900'>Shop Now</button>
+                                                <h2 className=' text-3xl  md:text-5xl font-serif font-bold'>{myDes} </h2>
+                                                <p className='text-wrap text-xl hidden md:block  '>{myDes1} </p>
+                                                <h1 className=''>Your summer sale Upto 50% off</h1>
+                                                <button onClick={() => { router.push("/category") }} type="button" className='px-8 py-2 bg-primary rounded-sm text-md hover:bg-secondary'>Shop Now</button>
 
                                             </div>
                                         </div>

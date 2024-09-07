@@ -1,4 +1,6 @@
+'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 const NewProducts = () => {
   return (
@@ -8,7 +10,7 @@ const NewProducts = () => {
                   <div className="grid place-content-center rounded  p-6 sm:p-8">
                       <div className="mx-auto max-w-md text-center lg:text-left">
                           <header>
-                              <h2 className="text-xl font-bold text-violet-900 sm:text-3xl">New Products</h2>
+                              <h2 className="text-xl font-bold  sm:text-3xl">New Products</h2>
 
                               <p className="mt-4 text-gray-900">
                                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas rerum quam amet
@@ -16,12 +18,12 @@ const NewProducts = () => {
                               </p>
                           </header>
 
-                          <a
-                              href="#"
-                              className="mt-8 inline-block rounded border border-violet-900 bg-violet-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
+                          <Link
+                              href="."
+                              className="mt-8 inline-block rounded border bg-primary px-12 py-3 text-sm font-medium  transition hover:shadow focus:outline-none focus:ring"
                           >
                               Shop All
-                          </a>
+                          </Link>
                       </div>
                   </div>
 
