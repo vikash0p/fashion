@@ -1,4 +1,3 @@
-// components/ContactComponent.tsx
 
 'use client';
 

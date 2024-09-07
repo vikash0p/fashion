@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { FaAward, FaUsers, FaShippingFast, FaGem } from 'react-icons/fa';
