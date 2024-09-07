@@ -14,7 +14,7 @@ export default function NotFound() {
                 sizes="(min-width: 400px) 320px, calc(65vw + 73px)" />
             <h2>Not Found</h2>
             <p>Could not find requested resource</p>
-            <Link href="/" className='px-8 py-2 bg-violet-800 rounded text-xl  text-white '>Return Home</Link>
+            <Link href="/" className='px-4 md:px-8 py-2 bg-violet-800 rounded text-xl  text-white '>Return Home</Link>
         </div>
     )
 }
