@@ -90,15 +90,15 @@ export default function AboutComponent() {
                 <h3 className="text-3xl font-bold text-center mb-6">What Our Customers Say</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="bg-secondary p-6 rounded-lg shadow-md">
-                        <p className="">"The jewelry is absolutely stunning! The attention to detail and craftsmanship is unmatched. I'm in love with my new necklace!"</p>
+                        <p className="">The jewelry is absolutely stunning The attention to detail and craftsmanship is unmatched. I am in love with my new necklace</p>
                         <p className="mt-4 font-bold">— Sarah W.</p>
                     </div>
                     <div className="bg-secondary p-6 rounded-lg shadow-md">
-                        <p className="">"Great customer service and fast shipping. I couldn't be happier with my purchase. Highly recommend Elegant Jewelry!"</p>
+                        <p className="">Great customer service and fast shipping. I could not be happier with my purchase. Highly recommend Elegant Jewelry!</p>
                         <p className="mt-4 font-bold">— David L.</p>
                     </div>
                     <div className="bg-secondary p-6 rounded-lg shadow-md">
-                        <p className="">"I bought an engagement ring here, and it was perfect. My fiancée loves it, and the quality is exceptional."</p>
+                        <p className="">I bought an engagement ring here, and it was perfect. My fiancée loves it, and the quality is exceptional.</p>
                         <p className="mt-4 font-bold">— Michael T.</p>
                     </div>
                 </div>
